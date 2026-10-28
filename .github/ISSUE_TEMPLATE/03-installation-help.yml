@@ -1,0 +1,54 @@
+name: Installation or launch help
+description: Ask about an official package, installation, or startup problem.
+title: "[Install] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Public installers may not be available yet. Check Releases before reporting. Do not share tokens, passwords, private file content, or unredacted local paths.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - Linux (AppImage)
+        - Linux (DEB)
+        - Linux (RPM)
+        - Linux (other)
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and version
+      placeholder: "Example: Fedora 43 / Windows 11"
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: Official release or installer filename
+      description: Leave blank if you are asking before an installer is available.
+    validations:
+      required: false
+  - type: textarea
+    id: issue
+    attributes:
+      label: What are you trying to do?
+      description: Include steps and any sanitized error message.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried? (optional)
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the official releases page and removed private information.
+          required: true

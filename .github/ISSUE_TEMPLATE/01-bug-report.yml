@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible problem in an available Localization Studio build.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Localization Studio. Please use a **sanitized** example and remove any secret keys, private translations, personal paths, or customer information. Do not report security vulnerabilities here; read SECURITY.md.
+  - type: input
+    id: app-version
+    attributes:
+      label: Application version
+      description: Enter the version shown in the application or release filename.
+      placeholder: "Example: 0.1.0 preview"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (Arch / CachyOS)
+        - Linux (Debian / Ubuntu)
+        - Linux (Fedora / RPM-based)
+        - Linux (other)
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version / distribution
+      placeholder: "Example: CachyOS KDE Plasma / Windows 11 24H2"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Sanitized logs or screenshots (optional)
+      description: Remove private strings, secret data, and identifying local paths.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched for an existing report and removed sensitive data from this issue.
+          required: true
+        - label: This is not a private security vulnerability report.
+          required: true

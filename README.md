@@ -4,77 +4,86 @@
 
 **A focused, local-first localization workspace for Windows and Linux.**
 
-Manage application translations with clarity, confidence, and control.
+*Software localization should be clear, reliable, and enjoyable.*
 
-**Status: In development** · **Windows and Linux support planned** · **Public installers not yet available**
+**Independent desktop application · In development · No public installers yet**
 
-[Releases](https://github.com/DrRoglaa/localization-studio-releases/releases) · [Report an issue](https://github.com/DrRoglaa/localization-studio-releases/issues) · [Developer website](https://itsroglic.com)
+[**Releases**](https://github.com/DrRoglaa/localization-studio-releases/releases) · [**Report an issue**](https://github.com/DrRoglaa/localization-studio-releases/issues/new/choose) · [**Website**](https://itsroglic.com)
 
 </div>
 
 ---
 
-## About Localization Studio
+## About
 
-Localization Studio is an independently developed desktop application for working with software localization files. Its initial focus is Apple's **`.xcstrings` string catalogs**, with a native desktop experience designed for both Windows and Linux.
+I'm **David Rok Roglič**, an independent software developer in Slovenia, and I'm building **Localization Studio** for developers who manage software translations on Windows and Linux.
 
-The goal is a straightforward, reliable workflow: browse translation keys, review language coverage, edit supported translations, and save catalog changes without silently damaging unrelated data.
+My initial focus is Apple's **`.xcstrings` string catalogs**. I want to make it easy to explore string keys and languages, understand translation progress, edit supported values, and preserve a catalog's existing structure safely.
 
-> **Current availability:** This repository does not contain downloadable installers yet. Localization Studio `v0.1.0` is at its foundation stage; the current interface uses demonstration data and is **not yet a functional `.xcstrings` editor**.
+> [!IMPORTANT]
+> **Localization Studio isn't available for public download yet.** The `v0.1.0` foundation has been tested locally on Linux, but the current UI uses demonstration data. Real `.xcstrings` reading and editing are planned for subsequent milestones; Windows packaging has not yet been verified.
 
-## What we're building
+## The experience I'm building
 
-- **Organized language workspace** — Navigate languages, string keys, source text, developer comments, and translation states.
-- **Search and review** — Find strings quickly, filter translation work, and monitor completion across languages.
-- **Safe `.xcstrings` editing** — Preserve existing catalog metadata and unsupported structures, validate edits, and guard against accidental overwrites.
-- **Local-first workflow** — Work with files stored on your own computer, without needing an account or cloud service for core editing.
-- **Comfortable desktop experience** — Light and dark themes, accessible controls, and keyboard-friendly workflows.
-- **Future extensibility** — Advanced plural/device variations, validation tools, and optional AI-assisted translation are planned for later milestones.
+| Area | My goal |
+| --- | --- |
+| **Clear workspace** | Browse languages, translation keys, source strings, comments, and status in one place. |
+| **Reliable editing** | Preserve unknown catalog metadata and unsupported variations rather than silently rewriting or removing them. |
+| **Fast review** | Search, filter, and check translation progress without unnecessary complexity. |
+| **Local-first** | Keep core catalog work on your computer without requiring an account or cloud service. |
+| **Cross-platform** | Deliver a consistent, keyboard-friendly desktop experience on Windows and Linux. |
+| **Future tools** | Add more validation options, advanced variations, and optional AI-assisted translation when the core is dependable. |
 
-These describe the product direction, **not a claim that all features are available today**.
+These are product goals, not claims that all features are already implemented.
 
 ## Downloads
 
-Official Windows and Linux packages will appear in this repository's **[GitHub Releases](https://github.com/DrRoglaa/localization-studio-releases/releases)** section once they have passed validation.
+Once public builds have passed the relevant checks, I'll publish them under [**GitHub Releases**](https://github.com/DrRoglaa/localization-studio-releases/releases).
 
-| Platform | Planned formats | Current availability |
+| Operating system | Intended distribution formats | Availability |
 | --- | --- | --- |
 | Windows (x64) | `.exe` installer, `.msi` | Not released |
 | Linux (x86-64) | `.AppImage`, `.deb`, `.rpm` | Not released |
 
-System requirements, supported distributions, installation steps, checksums, and any signing information will be documented with each published release. Please do not download installers claimed to be official from unrelated websites.
+Minimum system requirements and installation instructions will be published alongside tested installers. I won't present an unverified build as a stable release.
 
 ## Development roadmap
 
-| Milestone | Scope | Status |
+| Milestone | Focus | Status |
 | --- | --- | --- |
-| **M0 — Foundation** | Desktop shell, demonstration workspace, themes, basic CI and testing | Linux development build verified; not a public release |
-| **M1 — Catalog engine** | Read and validate `.xcstrings`, including preservation of unsupported data | Planned |
-| **M2 — Workspace** | Real catalog navigation, search, languages and translation progress | Planned |
-| **M3 — Editing and save** | Supported translation editing, undo/redo, safe writes and conflict handling | Planned |
-| **Later milestones** | Advanced variations, quality checks, optional AI support and distribution polish | Planned |
+| **M0 · Foundation** | Tauri/Rust/React desktop shell, sample UI, themes, testing, development tooling | Linux foundation verified; no public release |
+| **M1 · Catalog engine** | Parse and validate `.xcstrings`, preserve unsupported data safely | Planned |
+| **M2 · Workspace** | Navigate real keys, languages, progress, and search results | Planned |
+| **M3 · Editing and saving** | Supported translation edits, undo/redo, safe saves, conflict handling | Planned |
+| **Later** | Advanced variants, quality checks, optional AI features, verified installers | Planned |
 
-Roadmap details and timing may change as the application is tested against real-world files.
+The roadmap may change as I test real-world catalogs and platform behavior. See [the full roadmap](ROADMAP.md).
 
-## Privacy and security
+## Help shape Localization Studio
 
-Localization Studio is being designed around **local ownership of localization files**. Core catalog work is intended to run on-device, without mandatory sign-in or telemetry. Any future online translation feature would be optional and separately disclosed.
+As a solo developer, I value clear, focused feedback. I use structured GitHub issue forms to keep reports actionable:
 
-When releases become available, download them from the [official release page](https://github.com/DrRoglaa/localization-studio-releases/releases) and verify published checksums where provided. Security-sensitive issues should not include confidential translation files, credentials, or API keys in a public report.
+- [**Report a bug**](https://github.com/DrRoglaa/localization-studio-releases/issues/new?template=01-bug-report.yml) — Describe unexpected behavior in a build you tested.
+- [**Suggest a feature**](https://github.com/DrRoglaa/localization-studio-releases/issues/new?template=02-feature-request.yml) — Explain the problem you'd like the app to solve.
+- [**Get installation help**](https://github.com/DrRoglaa/localization-studio-releases/issues/new?template=03-installation-help.yml) — Ask about supported packages and setup.
 
-## Feedback and support
+Please remove private strings, API keys, usernames, local paths, and confidential project data from screenshots and logs before sharing them. **For security vulnerabilities, read [Security](SECURITY.md) instead of opening a public issue.**
 
-Have a feature suggestion or encounter a problem with a published build? Use [GitHub Issues](https://github.com/DrRoglaa/localization-studio-releases/issues) if enabled. When reporting a bug, please include your operating system and version, application version, reproduction steps, and a sanitized example when relevant.
+## Project information
 
-For information about the independent developer, visit [itsroglic.com](https://itsroglic.com).
+| Page | Details |
+| --- | --- |
+| [**Roadmap**](ROADMAP.md) | Planned milestones and readiness criteria |
+| [**Support**](SUPPORT.md) | Help, troubleshooting, feedback, and issue reporting |
+| [**Security**](SECURITY.md) | Responsible vulnerability reporting and supported releases |
+| [**Copyright**](COPYRIGHT.md) | Ownership, distribution terms, and third-party notices |
+| [**Donations**](DONATE.md) | Ways to support independent development |
 
-## Repository and licensing
+## Source and distribution
 
-**This is the public distribution repository.** It is intended for release notes, installation documentation, checksums, and compiled Windows/Linux downloads. The application's development source code is maintained in a **separate private repository**.
+This **public repository is for distribution and project information**. The application's development source is maintained in a separate **private repository**. Public access to a download does not imply that the application is open source.
 
-Public access to binaries does not imply that the application's proprietary source code is open source. Third-party license notices and applicable distribution terms will be provided with releases.
-
-Localization Studio is independently developed and is not affiliated with or endorsed by Apple Inc.
+Localization Studio is an independent project and is not affiliated with or endorsed by Apple Inc.
 
 ---
 
