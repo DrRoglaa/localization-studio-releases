@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest a localization workflow improvement or a new capability.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Localization Studio is developed independently by one developer. Specific use cases are more helpful than a generic feature list. Please avoid confidential files or customer content.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the localization task, friction, or missing workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to happen?
+      description: Describe your preferred behavior, without requiring a particular implementation.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      options:
+        - String catalog compatibility
+        - Editing and validation
+        - Search and navigation
+        - Language management
+        - Windows or Linux integration
+        - Accessibility and interface
+        - Optional AI-assisted translation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds or alternatives (optional)
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the roadmap and existing feature requests.
+          required: true
